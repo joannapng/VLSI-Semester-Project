@@ -1,0 +1,19 @@
+.include "d_ff.spice"
+
+.param vdd=2.5V clk_period=200ns half_period=100ns tr=1ps tf=1ps td=50ns
+
+Vdd Vdd 0 DC vdd
+
+Vclk clk 0 pulse (0 {vdd} {half_period} {tr} {tf} {half_period} {clk_period})
+Vnot_clk not_clk 0 pulse (0 {vdd} 0 {tr} {tf} {half_period} {clk_period})
+
+Vd D 0 pulse (0 {vdd} {td} {tr} {tf} {half_period + td} {2*clk_period})
+
+.ic V(Q)=0
+.tran 100p 800ns
+
+.control
+    run
+    plot V(clk) V(D) V(Q)
+.endc
+.end

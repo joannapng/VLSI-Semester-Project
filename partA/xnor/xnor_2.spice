@@ -1,0 +1,45 @@
+* SPICE3 file created from xnor_2.ext - technology: scmos
+
+.include "0.25-models"
+.option scale=1u
+
+M1000 out a a_16_31# Vdd CMOSP w=20 l=2
++  ad=240 pd=104 as=120 ps=52
+M1001 a_n8_n28# a gnd gnd CMOSN w=8 l=2
++  ad=144 pd=84 as=96 ps=68
+M1002 a_0_31# a_n22_n25# out Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1003 a_n22_n25# a Vdd Vdd CMOSP w=10 l=2
++  ad=60 pd=32 as=240 ps=116
+M1004 a_n56_n48# b gnd gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=0 ps=0
+M1005 Vdd a_n56_n48# a_0_31# Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 a_16_31# b Vdd Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 a_n22_n25# a gnd gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1008 out a_n22_n25# a_n8_n28# gnd CMOSN w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1009 gnd b a_n8_n28# gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 a_n8_n28# a_n56_n48# out gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 a_n56_n48# b Vdd Vdd CMOSP w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+C0 gnd a_n8_n28# 4.89fF
+C1 Vdd a_n22_n25# 7.15fF
+C2 gnd b 17.86fF
+C3 Vdd a 13.40fF
+C4 Vdd b 4.77fF
+C5 gnd a_n56_n48# 21.37fF
+C6 gnd a_n22_n25# 8.95fF
+C7 Vdd a_n56_n48# 3.76fF
+C8 Vdd out 4.14fF
+C9 gnd a 10.00fF
+C10 a_n8_n28# 0 2.82fF
+C11 out 0 15.60fF
+C12 a 0 24.46fF
+C13 b 0 35.07fF
+C14 a_n56_n48# 0 16.61fF
+C15 a_n22_n25# 0 19.95fF

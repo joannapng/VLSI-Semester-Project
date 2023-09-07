@@ -1,0 +1,452 @@
+{
+    "XOR": {
+        "path": "../partA/xor/xor.spice",
+        "type": "combinational",
+        "pins": {
+            "A": {
+                "direction": "input"
+            }, 
+            "B": {
+                "direction": "input"
+            }, 
+            "OUT": {
+                "direction": "output",
+                "function": "(A^B)", 
+                "timings": {
+                    "1": {
+                    "related_pin": "A", 
+                    "when": "!B", 
+                    "timing_sense": "positive_unate", 
+                    "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }, 
+                    "2": {
+                    "related_pin": "A",
+                    "when": "B", 
+                    "timing_sense": "negative_unate", 
+                    "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    },
+                    "3": {
+                    "related_pin": "B", 
+                    "when": "!A",
+                    "timing_sense": "positive_unate", 
+                    "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }, 
+                    "4": {
+                    "related_pin": "B", 
+                    "when": "A",
+                    "timing_sense": "negative_unate", 
+                    "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }
+                }
+            }
+        }
+    }, 
+    "XNOR": {
+        "path": "../partA/xnor/xnor.spice",
+        "type": "combinational",
+        "pins": {
+            "A": {
+                "direction": "input"
+            }, 
+            "B": {
+                "direction": "input"
+            }, 
+            "OUT": {
+                "direction": "output",
+                "function": "(!(A^B))",
+                "timings": {
+                    "1": {
+                        "related_pin": "A",
+                        "when": "B",  
+                        "timing_sense": "positive_unate", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }, 
+                    "2": {
+                        "related_pin": "A", 
+                        "when": "!B", 
+                        "timing_sense": "negative_unate", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    },
+                    "3": {
+                        "related_pin": "B",
+                        "when": "A", 
+                        "timing_sense": "positive_unate", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }, 
+                    "4": {
+                        "related_pin": "B", 
+                        "when": "!A", 
+                        "timing_sense": "negative_unate", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }
+                }
+            }
+        }
+    }, 
+    "DFF": {
+        "path": "../partA/dff/dff.spice",
+        "type": "sequential",
+        "ff": {
+            "next_state": "D",
+            "clocked_on": "CLK"
+        }, 
+        "pins": {
+            "CLK": {
+                "direction": "input" 
+            }, 
+            "D": {  
+                "direction": "input",
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "timing_type": "setup_rising", 
+                        "measurements": ["rise_constraint", "fall_constraint"]
+                    },
+                    "2": {
+                        "related_pin": "CLK", 
+                        "timing_type": "hold_rising", 
+                        "measurements": ["rise_constraint", "fall_constraint"]
+                    }
+                }
+            }, 
+            "Q": {
+                "direction": "output", 
+                "function": "IQ", 
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "timing_sense": "non_unate", 
+                        "timing_type": "rising_edge", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }
+                }
+            }, 
+            "Qbar": {
+                "direction": "output",
+                "function": "IQN", 
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "timing_sense": "non_unate", 
+                        "timing_type": "rising_edge", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    }
+                }
+            }
+        }
+    }, 
+    "DFFRS": {
+        "type": "sequential",
+        "path": "../partA/dffrs/dffrs.spice",
+        "ff": {
+            "next_state": "D", 
+            "clocked_on": "CLK", 
+            "clear": "R", 
+            "preset": "S"
+        },
+        "pins": {
+            "CLK": {
+                "direction": "input"
+            }, 
+            "D": {
+                "direction": "input",
+                "timings": {
+                    "1": {              
+                        "related_pin": "CLK", 
+                        "timing_type": "setup_rising",
+                        "when": "!S & !R", 
+                        "measurements": ["rise_constraint", "fall_constraint"]
+                    }, 
+                    "2": {
+                        "related_pin": "CLK", 
+                        "timing_type": "hold_rising", 
+                        "when": "!S & !R",
+                        "measurements": ["rise_constraint", "fall_constraint"]
+                    }
+                }
+            }, 
+            "S": {
+                "direction": "input", 
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "when": "!R", 
+                        "timing_type": "removal_rising", 
+                        "measurements": ["fall_constraint"]
+                    }, 
+                    "2": {
+                        "related_pin": "CLK",
+                        "when": "!R", 
+                        "timing_type": "recovery_rising", 
+                        "measurements": ["fall_constraint"]
+                    }
+                }
+            }, 
+            "R": {
+                "direction": "input", 
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "when": "!S", 
+                        "timing_type": "recovery_rising", 
+                        "measurements": ["fall_constraint"]
+                    },
+                    "2": {
+                        "related_pin": "CLK", 
+                        "when": "!S", 
+                        "timing_type": "removal_rising", 
+                        "measurements": ["fall_constraint"]
+                    }
+                }
+            }, 
+            "Q": {
+                "direction": "output",
+                "function": "IQ", 
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "timing_sense": "non_unate", 
+                        "timing_type": "rising_edge", 
+                        "measurements": ["cell_rise", "rise_transition", "cell_fall", "fall_transition"]
+                    },
+                    "2": {
+                        "related_pin": "R", 
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear", 
+                        "when": "!CLK & !D & !S",
+                        "measurements": ["cell_fall", "fall_transition"]
+                    }, 
+                    "3":{
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & !D & S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "4": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & D & !S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "5": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & D & S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "6": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & !D & !S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "7": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & D & !S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "8": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & !D & S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "9": {
+                        "related_pin": "R",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & D & S", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "10": {
+                        "related_pin": "S", 
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset", 
+                        "when": "!CLK & !D & !R",
+                        "measurements": ["cell_rise", "rise_transition"]
+                    }, 
+                    "11":{
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & !D & R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "12": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & D & !R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "13": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & D & R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "14": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & !D & !R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "15": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & D & !R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "16": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & !D & R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "17": {
+                        "related_pin": "S",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & D & R", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    }
+                }
+            }, 
+            "Qbar": {
+                "direction": "output",
+                "function": "IQN",
+                "timings": {
+                    "1": {
+                        "related_pin": "CLK", 
+                        "timing_sense": "non_unate", 
+                        "timing_type": "rising_edge", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "2": {
+                        "related_pin": "R", 
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear", 
+                        "when": "!CLK & !D & !S",
+                        "measurements": ["cell_rise", "rise_transition"]
+                    }, 
+                    "3":{
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & !D & S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "4": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & D & !S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "5": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "!CLK & D & S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "6": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & !D & !S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "7": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & D & !S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "8": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & !D & S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "9": {
+                        "related_pin": "R",
+                        "timing_sense": "positive_unate", 
+                        "timing_type": "clear",
+                        "when": "CLK & D & S", 
+                        "measurements": ["cell_rise", "rise_transition"]
+                    },
+                    "10": {
+                        "related_pin": "S", 
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset", 
+                        "when": "!CLK & !D & !R",
+                        "measurements": ["cell_fall", "fall_transition"]
+                    }, 
+                    "11":{
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & !D & R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "12": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & D & !R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "13": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "!CLK & D & R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "14": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & !D & !R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "15": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & D & !R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "16": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & !D & R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    },
+                    "17": {
+                        "related_pin": "S",
+                        "timing_sense": "negative_unate", 
+                        "timing_type": "preset",
+                        "when": "CLK & D & R", 
+                        "measurements": ["cell_fall", "fall_transition"]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+commit c6d18e36513acd4e4e030ddda99f8b72d9294ca0
+Author: ioanna <ipanagou@uth.gr>
+Date:   Wed Feb 8 21:14:18 2023 +0200
+
+    final version with verilog modules
+
+commit d74bb394ecbbb6fb3fd3592268e388c6d958bdbe
+Author: ioanna <ipanagou@uth.gr>
+Date:   Wed Feb 8 15:09:10 2023 +0200
+
+    added verilog lib files
+
+commit e0019ac4551d4c1704e4f9b9b79807e294e14408
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Feb 7 22:51:44 2023 +0200
+
+    added ff clause
+
+commit 4d62e444b0e9c630c95591cde546e09b8ba6572d
+Author: ioanna <ipanagou@uth.gr>
+Date:   Mon Feb 6 02:24:20 2023 +0200
+
+    added function + area
+
+commit 07cb5577f0256aacc8b7d81cff934311da5c2ae7
+Author: ioanna <ipanagou@uth.gr>
+Date:   Mon Feb 6 02:12:56 2023 +0200
+
+    area added
+
+commit d5011a0486cb0c0a845e39890eceaa7da464e63a
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Feb 5 16:33:09 2023 +0200
+
+    lib file okay, to be done: area and multiple threads
+
+commit f7bdbc4e9cea20f805000a13296af05707819be6
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Feb 5 11:54:34 2023 +0200
+
+    fixed .lib syntax errors
+
+commit b5d0a90141908b936b9cd16454e00e764ff079c3
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Feb 5 11:24:02 2023 +0200
+
+    all results collected
+
+commit f7e1566349b15b52cdc5e8e1608c7c0fceb5db08
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Feb 3 01:27:22 2023 +0200
+
+    all results correctd
+
+commit 70c5c9f08adbfdb4948567b6b033d843c927a383
+Author: ioanna <ipanagou@uth.gr>
+Date:   Thu Feb 2 23:26:55 2023 +0200
+
+    added threads, not sure that they work though
+
+commit d223357c1719220107f2052861daf79d0c868837
+Author: ioanna <ipanagou@uth.gr>
+Date:   Mon Jan 30 02:28:37 2023 +0200
+
+    last minute changes
+
+commit 168710b7fa8ff3ddec71ca04f3a8f8e74eceef96
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Jan 29 20:03:55 2023 +0200
+
+    almost done
+
+commit c591e3189f88dad78e28242f614e37914438e51f
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Jan 29 12:42:13 2023 +0200
+
+    quicker setup done
+
+commit 60f22dd80d78dd9fd8621fab38752521a25def08
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Jan 29 02:21:56 2023 +0200
+
+    fixed the problem with the Qbar
+
+commit 51b5ec0ee3e4dff8fbedc3e57a2cf31be5d5baed
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sun Jan 29 01:46:13 2023 +0200
+
+    updated version that works good for output pin timings
+
+commit 85c0a60a71323d600c72c176d040c7ce1609c5b9
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sat Jan 28 11:52:40 2023 +0200
+
+    Script to write the lib file done, ready for full test of sequential cells
+
+commit 9c69a1d8e6cce584e32b8338c5288642afdc0372
+Author: ioanna <ipanagou@uth.gr>
+Date:   Sat Jan 28 02:27:40 2023 +0200
+
+    starting to write the lib file
+
+commit 58a3dee6da3d8942dfaa0fbc78d4a175e4b1bed6
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 27 23:25:26 2023 +0200
+
+    new dff added
+
+commit 96f9742537eef986f071e95501f86011ece6cb70
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 27 20:57:44 2023 +0200
+
+    ready for testing everything, the d flip flop needs to be changed
+
+commit ad706246106ccdebdbc7012a8ace554b69826490
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 27 15:13:42 2023 +0200
+
+    added new dffrs implementation using nor gates
+
+commit 662de84bb2d7e4cc6658d2ecb707aedd1fedaeea
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 27 01:28:29 2023 +0200
+
+    updated configuration file
+
+commit f3dc77be513ac35c434c9053031c7a733fc697e9
+Author: ioanna <ipanagou@uth.gr>
+Date:   Thu Jan 26 13:06:04 2023 +0200
+
+    when conditions added for setup and hold, removal and recovery work, need to do the s to q and r to q (and the configuration file)
+
+commit 7c1c98b2ef0489d30cd5719341f7785f5d51c17e
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 24 02:31:08 2023 +0200
+
+    xor, xnor work, clkq, clkqbar for dff work, need to fix removal, so that it finishes someday, when hold becomes negative, make it zero
+
+commit 4c59fa341d8932ee8fc1d6a1bf3b00a7be87a01a
+Author: ioanna <ipanagou@uth.gr>
+Date:   Mon Jan 23 16:44:53 2023 +0200
+
+    recovery time done
+
+commit 59a1e962180d4c2d0ee51118af617536a2be0c26
+Author: ioanna <ipanagou@uth.gr>
+Date:   Mon Jan 23 13:50:02 2023 +0200
+
+    Setup and Hold done, unsure if my flip flop has hold
+
+commit db0d85bd08b48ccdcd5b2b61427823b5cf4d9078
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 20 22:18:56 2023 +0200
+
+    stores the measurements of the combinational gates to separate files
+
+commit 17f4f73f631a942755278de509378a7b6909c387
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 20 20:44:33 2023 +0200
+
+    added setup and hold for dff, not sure hold works though
+
+commit fdf84cf223127a2605dc7347086b9277ee74f627
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 20 15:58:52 2023 +0200
+
+    added c2q delay for the calculation of setup and hold time
+
+commit eb3aa54522503ff5c58149d59cef3f2e7fbc0f62
+Author: ioanna <ipanagou@uth.gr>
+Date:   Fri Jan 20 12:10:31 2023 +0200
+
+    dff clock-to-Q and clock-to-Qbar working
+
+commit 1bf3fa6f7a9a5811afd79c2cb74df6ceb9ac284e
+Author: ioanna <ipanagou@uth.gr>
+Date:   Thu Jan 19 19:11:50 2023 +0200
+
+    simpler loop structure, added initial conditions for output, all xor and xnor implementations are working
+
+commit 260034faf0fc2a6e750cdf20aa96007a87c0df2f
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 17 20:44:49 2023 +0200
+
+    runs .spice simulations
+
+commit 278e088f3538290b18eebbffb2c0eda4d78a4e74
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 17 18:09:01 2023 +0200
+
+    Added characterization_tool.py that creates the main spice deck, the inputs and the measurement commands for the combinational gates (only cell rise at the moment)
+
+commit 29d09e8d283dce018f9bc9bd1bf3a88ab5020273
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 17 15:19:55 2023 +0200
+
+    added json file, checked that it works
+
+commit 8ac8084fea9f56b184def7fa3c78635035775722
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 17 15:12:07 2023 +0200
+
+    python dictionary to be used for configuration file done, unsure about the dffrs set and reset
+
+commit 90f447e0c50e22b43715dcbad86af8e514bc086f
+Author: ioanna <ipanagou@uth.gr>
+Date:   Tue Jan 17 11:46:15 2023 +0200
+
+    part A added

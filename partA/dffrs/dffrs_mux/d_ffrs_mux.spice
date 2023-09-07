@@ -1,0 +1,68 @@
+* SPICE3 file created from d_ffrs_mux.ext - technology: scmos
+
+.include "0.25-models"
+.option scale=1u
+
+M1000 Qm a_n4_n20# Vdd Vdd CMOSP w=8 l=2
++  ad=144 pd=72 as=288 ps=168
+M1001 a_88_n16# a_63_n28# Vdd Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=0 ps=0
+M1002 gnd Qm a_n4_n20# Gnd CMOSN w=4 l=4
++  ad=180 pd=144 as=72 ps=48
+M1003 a_88_n16# a_63_n28# gnd Gnd CMOSN w=4 l=2
++  ad=60 pd=44 as=0 ps=0
+M1004 a_247_n30# R a_200_n40# Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=192 ps=112
+M1005 a_154_6# S Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1006 gnd a_88_n16# a_63_n28# Gnd CMOSN w=4 l=4
++  ad=0 pd=0 as=72 ps=48
+M1007 a_200_n40# a_154_6# Vdd Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 a_n4_n20# not_clk D Gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=48 ps=28
+M1009 Q R gnd Gnd CMOSN w=6 l=2
++  ad=72 pd=48 as=0 ps=0
+M1010 Q a_247_n30# a_200_n40# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=108 ps=72
+M1011 a_200_n40# S Vdd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+M1012 Q R a_200_n40# Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=0 ps=0
+M1013 a_200_n40# a_154_6# a_88_n16# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 Vdd Qm a_n4_n20# Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=144 ps=72
+M1015 a_n4_n20# clk D Vdd CMOSP w=16 l=2
++  ad=0 pd=0 as=96 ps=44
+M1016 a_200_n40# S a_88_n16# Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 a_63_n28# not_clk Qm Vdd CMOSP w=16 l=2
++  ad=144 pd=72 as=0 ps=0
+M1018 a_154_6# S gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1019 Vdd a_88_n16# a_63_n28# Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1020 Q a_247_n30# gnd Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=48 ps=28
+M1021 a_247_n30# R gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1022 Qm a_n4_n20# gnd Gnd CMOSN w=4 l=2
++  ad=72 pd=48 as=0 ps=0
+M1023 a_63_n28# clk Qm Gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 a_247_n30# Gnd 17.58fF
+C1 not_clk Gnd 37.77fF
+C2 a_88_n16# Gnd 28.04fF
+C3 Qm Gnd 24.84fF
+C4 gnd Gnd 30.46fF
+C5 a_63_n28# Gnd 5.81fF
+C6 Q Gnd 20.96fF
+C7 a_200_n40# Gnd 28.39fF
+C8 a_n4_n20# Gnd 18.62fF
+C9 D Gnd 5.17fF
+C10 clk Gnd 24.92fF
+C11 Vdd Gnd 3.38fF
+C12 a_154_6# Gnd 38.86fF
+C13 S Gnd 29.00fF
+C14 R Gnd 67.09fF

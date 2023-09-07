@@ -1,0 +1,50 @@
+.include "d_ff_async_set.spice"
+
+*.include "d_ff_async_set.spice"
+
+.param vdd=2.5V clk_period=20u half_period=10u tr=10p tf=10p td=10u wnmin=3u wpmin=9u
+
+
+Vdd Vdd 0 DC vdd
+Vclk clk 0 pulse (0 {vdd} {td} {tr} {tf} {half_period} {clk_period})
+Vnot_clk not_clk 0 pulse (0 {vdd} 0 {tr} {tf} {half_period} {clk_period})
+
+Vs S 0 pwl (
+    + 0 0 
+    + 2u 0
+    + {2u + 10p} {vdd}
+    + 5u {vdd}
+    + {5u + 10p} 0
+    + 38u   0
+    + {38u+10p} {vdd}
+    + 42u   {vdd}
+    + 46u {vdd}
+    + {46u + 10p} 0
++)
+
+
+Vd D 0 pwl (
+    + 0 0 
+    + 18u 0
+    + {18u + 10p} {vdd}
+    + 26u {vdd}
+    + {26u + 10p} 0
+    + 32u   0
+    + {32u+10p} {vdd}
+    + 34u {vdd}
+    + {34u+10p} {0}
++)
+
+.ic V(Q)=0
+.tran 100n 50u
+
+.control
+    run
+    set xbrushwidth=3
+    set color0=white
+    set color1=black
+    set hcopyheight=200
+    set hcopywidth=1000
+    set hcopydevtype=svg
+.endc
+.end

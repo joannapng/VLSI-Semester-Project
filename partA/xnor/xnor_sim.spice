@@ -1,0 +1,24 @@
+* Test operation of fxor
+
+.include "xnor_2.spice"
+
+.param vdd=2.5V td=400ns tr=0.001ps tf=0.001ps pw=400ns per={td + tr + pw + tf}
+
+Vdd vdd 0 dc {vdd} 
+
+Vb b 0 pulse (0 {vdd} {td} {tr} {tf} {pw} {per})
+Va a 0 pulse (0 {vdd} {2 * td} {tf} {tr} {2 * pw} {2 * per})
+
+.tran 1ns {4 * per}
+
+.control
+    run
+    set color2=red
+    plot V(a) title 'a'
+    set color2=blue
+    plot V(b) title 'b'
+    set color2=green
+    plot V(out) title 'Output of fxor'
+.endc
+
+.end

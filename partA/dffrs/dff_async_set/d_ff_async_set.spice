@@ -1,0 +1,71 @@
+* SPICE3 file created from d_ff_async_set.ext - technology: scmos
+
+.include "0.25-models"
+.option scale=1u
+
+M1000 Qm not_S or_2_out Gnd CMOSN w=4 l=2
++  ad=120 pd=88 as=48 ps=40
+M1001 not_S S or_2_out Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=0 ps=0
+M1002 mux_out_1 S Qm Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=0 ps=0
+M1003 gnd or_2_out Dpass Gnd CMOSN w=4 l=4
++  ad=144 pd=120 as=96 ps=68
+M1004 gnd Q Qpass Gnd CMOSN w=4 l=4
++  ad=0 pd=0 as=96 ps=68
+M1005 Qpass clk Qm Gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 or_1_out S S Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=28 ps=22
+M1007 Qbar Q gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1008 not_S S gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 mux_out_1 S Qpass Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=192 ps=100
+M1010 Qpass not_clk Qm Vdd CMOSP w=16 l=2
++  ad=0 pd=0 as=192 ps=100
+M1011 Dpass clk D Vdd CMOSP w=16 l=2
++  ad=144 pd=72 as=96 ps=44
+M1012 Dpass not_clk D Gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=48 ps=28
+M1013 mux_out_1 not_S Qpass Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 not_S S Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=288 ps=168
+M1015 Q mux_out_1 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1016 or_1_out not_S Dpass Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 Vdd or_2_out Dpass Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1018 Q mux_out_1 Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1019 mux_out_1 not_S Qm Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1020 Qbar Q Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1021 Qm or_1_out gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 Vdd Q Qpass Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1023 Qm or_1_out Vdd Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 Qpass not_S 3.08fF
+C1 S or_2_out 4.32fF
+C2 S not_S 4.09fF
+C3 Qbar Gnd 3.38fF
+C4 or_2_out Gnd 19.39fF
+C5 gnd Gnd 30.46fF
+C6 Q Gnd 39.80fF
+C7 S Gnd 42.27fF
+C8 not_clk Gnd 37.61fF
+C9 mux_out_1 Gnd 15.93fF
+C10 Qpass Gnd 28.21fF
+C11 Qm Gnd 24.44fF
+C12 not_S Gnd 25.44fF
+C13 Vdd Gnd 2.76fF
+C14 or_1_out Gnd 12.14fF
+C15 Dpass Gnd 12.34fF
+C16 D Gnd 2.44fF
+C17 clk Gnd 57.52fF

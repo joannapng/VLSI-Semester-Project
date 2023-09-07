@@ -1,0 +1,40 @@
+timestamp 1672503769
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "Qbar" 120 3572 139 -34 ndiff 24 20 48 28 0 0 0 0 0 0 0 0 120 68 0 0 0 0
+node "gnd" 505 62228 11 -16 ndiff 120 100 0 0 0 0 0 0 0 0 0 0 1420 718 0 0 0 0
+node "not_clk" 2099 40624 -6 -65 p 0 0 0 0 360 360 0 0 0 0 0 0 16 16 0 0 0 0
+node "Q" 630 33408 88 -16 ndiff 24 20 48 28 192 134 0 0 0 0 0 0 500 258 0 0 0 0
+node "a_63_n20#" 833 18992 63 -20 pdiff 48 40 96 56 68 64 0 0 0 0 0 0 364 198 112 64 0 0
+node "Qm" 708 24844 19 -16 ndiff 48 40 96 56 124 70 0 0 0 0 0 0 464 240 0 0 0 0
+node "Vdd" 1098 60640 11 -2 pdiff 0 0 240 140 0 0 0 0 0 0 0 0 1388 718 240 136 0 0
+node "D" 120 3008 -12 -16 ndiff 24 20 48 28 0 0 0 0 0 0 0 0 108 62 0 0 0 0
+node "a_n4_n16#" 833 18616 -4 -16 ndiff 48 40 96 56 68 64 0 0 0 0 0 0 356 194 112 64 0 0
+node "clk" 1455 27772 -6 -4 p 0 0 0 0 252 252 0 0 0 0 0 0 16 16 0 0 0 0
+cap "Qm" "Vdd" 720
+cap "gnd" "a_63_n20#" 720
+cap "Q" "Vdd" 720
+cap "clk" "Vdd" 480
+cap "gnd" "not_clk" 480
+cap "gnd" "a_n4_n16#" 720
+device mosfet nfet 100 -49 101 -48 4 4 "Gnd!" "Q" 8 0 "a_63_n20#" 4 0 "gnd" 4 0
+device mosfet nfet 137 -34 138 -33 2 4 "Gnd!" "Q" 4 0 "gnd" 4 0 "Qbar" 4 0
+device mosfet pfet 100 -34 101 -33 4 8 "Vdd!" "Q" 8 0 "a_63_n20#" 8 0 "Vdd" 8 0
+device mosfet nfet 31 -49 32 -48 4 4 "Gnd!" "Qm" 8 0 "a_n4_n16#" 4 0 "gnd" 4 0
+device mosfet pfet 31 -34 32 -33 4 8 "Vdd!" "Qm" 8 0 "a_n4_n16#" 8 0 "Vdd" 8 0
+device mosfet pfet 137 -20 138 -19 2 8 "Vdd!" "Q" 4 0 "Vdd" 8 0 "Qbar" 8 0
+device mosfet nfet 86 -16 87 -15 2 4 "Gnd!" "a_63_n20#" 4 0 "gnd" 4 0 "Q" 4 0
+device mosfet pfet 61 -20 62 -19 2 8 "Vdd!" "not_clk" 4 0 "Qm" 8 0 "a_63_n20#" 8 0
+device mosfet nfet 17 -16 18 -15 2 4 "Gnd!" "a_n4_n16#" 4 0 "gnd" 4 0 "Qm" 4 0
+device mosfet nfet -6 -16 -5 -15 2 4 "Gnd!" "not_clk" 4 0 "D" 4 0 "a_n4_n16#" 4 0
+device mosfet pfet 86 -2 87 -1 2 8 "Vdd!" "a_63_n20#" 4 0 "Vdd" 8 0 "Q" 8 0
+device mosfet nfet 61 -2 62 -1 2 4 "Gnd!" "clk" 4 0 "Qm" 4 0 "a_63_n20#" 4 0
+device mosfet pfet 17 -2 18 -1 2 8 "Vdd!" "a_n4_n16#" 4 0 "Vdd" 8 0 "Qm" 8 0
+device mosfet pfet -6 -2 -5 -1 2 8 "Vdd!" "clk" 4 0 "D" 8 0 "a_n4_n16#" 8 0
+subcap "gnd" -25756
+subcap "a_63_n20#" -8308
+subcap "Vdd" -57256
+subcap "Q" -564

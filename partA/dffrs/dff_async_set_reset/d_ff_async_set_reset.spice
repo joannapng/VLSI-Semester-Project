@@ -1,0 +1,99 @@
+* SPICE3 file created from d_ff_async_set_reset.ext - technology: scmos
+
+.option scale=1u
+.include "0.25-models"
+
+M1000 mux_out_1 sel Qm Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=120 ps=88
+M1001 a_4_n2# R not_R Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=48 ps=40
+M1002 Qpass clk Qm Gnd CMOSN w=8 l=2
++  ad=96 pd=68 as=0 ps=0
+M1003 Q mux_out_1 Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=384 ps=224
+M1004 not_sel sel gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=192 ps=160
+M1005 Qbar Q gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 gnd Q Qpass Gnd CMOSN w=4 l=4
++  ad=0 pd=0 as=0 ps=0
+M1007 not_R R Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1008 Vdd a_93_n51# Dpass Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=144 ps=72
+M1009 Qbar Q Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1010 or_1_out S S Gnd CMOSN w=4 l=2
++  ad=72 pd=60 as=52 ps=42
+M1011 mux_out_1 sel Qpass Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=192 ps=100
+M1012 not_S S gnd Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=0 ps=0
+M1013 sel not_S R Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=48 ps=40
+M1014 mux_out_1 not_sel Qpass Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 Dpass clk D Vdd CMOSP w=16 l=2
++  ad=0 pd=0 as=96 ps=44
+M1016 Dpass not_clk D Gnd CMOSN w=8 l=2
++  ad=96 pd=68 as=48 ps=28
+M1017 not_sel sel Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1018 a_152_n31# not_R a_93_n51# Gnd CMOSN w=4 l=2
++  ad=72 pd=60 as=48 ps=40
+M1019 Q mux_out_1 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1020 not_S S Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1021 not_S S a_152_n31# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 or_1_out not_S Dpass Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1023 Qm a_4_n2# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1024 Qpass not_clk Qm Vdd CMOSP w=16 l=2
++  ad=0 pd=0 as=192 ps=100
+M1025 mux_out_1 not_sel Qm Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1026 gnd a_93_n51# Dpass Gnd CMOSN w=4 l=4
++  ad=0 pd=0 as=0 ps=0
+M1027 sel S S Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 Qm not_S a_152_n31# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1029 Qm a_4_n2# Vdd Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1030 R R a_93_n51# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1031 Vdd Q Qpass Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1032 not_R R gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1033 a_4_n2# not_R or_1_out Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 R S 2.87fF
+C1 a_93_n51# S 3.06fF
+C2 gnd not_S 2.16fF
+C3 S gnd 2.16fF
+C4 Qpass gnd 2.16fF
+C5 Dpass Vdd 2.51fF
+C6 S not_S 4.57fF
+C7 Qbar Gnd 4.14fF
+C8 a_152_n31# Gnd 12.41fF
+C9 Q Gnd 30.57fF
+C10 Qpass Gnd 15.79fF
+C11 not_sel Gnd 18.80fF
+C12 a_93_n51# Gnd 20.24fF
+C13 gnd Gnd 23.69fF
+C14 S Gnd 42.80fF
+C15 not_clk Gnd 37.61fF
+C16 Qm Gnd 71.91fF
+C17 or_1_out Gnd 13.91fF
+C18 not_R Gnd 14.56fF
+C19 not_S Gnd 25.59fF
+C20 Vdd Gnd 2.76fF
+C21 a_4_n2# Gnd 21.16fF
+C22 Dpass Gnd 12.49fF
+C23 D Gnd 2.44fF
+C24 R Gnd 5.17fF
+C25 clk Gnd 95.13fF

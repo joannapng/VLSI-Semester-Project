@@ -1,0 +1,19 @@
+.include PATH
+.include inputs.spice
+.include meas.spice
+
+.global Vdd CLK NOT_CLK
+.param cap=OUTPUT_CAPACITANCEpf vdd=2.5V 
+
+CL1 Q 0 {cap}
+CL2 Qbar 0 {cap}
+.ic V(Q) = INIT_OUT
+.ic V(Qbar) = R_INIT_OUT
+
+Xcell D Q Qbar CELL
+
+Vvdd Vdd 0 DC {vdd}
+.control
+    run
+    tran 1n 5u
+.endc

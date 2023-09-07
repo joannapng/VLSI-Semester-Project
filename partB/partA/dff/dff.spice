@@ -1,0 +1,47 @@
+* SPICE3 file created from dff_new.ext - technology: scmos
+
+.include "0.25-models"
+.option scale=1u
+
+.subckt DFF D Q Qbar 
+M1000 Qbar Q Vdd Vdd CMOSP w=8 l=2
++  ad=144 pd=72 as=288 ps=144
+M1001 Qm Dpass Vdd Vdd CMOSP w=16 l=2
++  ad=192 pd=88 as=0 ps=0
+M1002 Q Qbar Vdd Vdd CMOSP w=16 l=2
++  ad=96 pd=44 as=0 ps=0
+M1003 Dpass not_clk D gnd CMOSN w=8 l=2
++  ad=72 pd=48 as=48 ps=28
+M1004 Qm Dpass gnd gnd CMOSN w=10 l=2
++  ad=108 pd=60 as=168 ps=104
+M1005 Q Qbar gnd gnd CMOSN w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1006 Dpass Qm gnd gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 Qbar not_clk Qm Vdd CMOSP w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 Qbar Q gnd gnd CMOSN w=4 l=2
++  ad=72 pd=48 as=0 ps=0
+M1009 Dpass clk D Vdd CMOSP w=16 l=2
++  ad=144 pd=72 as=96 ps=44
+M1010 Dpass Qm Vdd Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 Qbar clk Qm gnd CMOSN w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 Dpass gnd 13.08fF
+C1 not_clk Vdd 18.39fF
+C2 clk gnd 6.28fF
+C3 Q gnd 3.19fF
+C4 Dpass Vdd 2.18fF
+C5 clk Vdd 23.26fF
+C6 Qm gnd 3.37fF
+C7 Q Vdd 10.79fF
+C8 Qbar gnd 14.58fF
+C9 Qm Vdd 9.86fF
+C10 Qbar Vdd 2.18fF
+C11 not_clk gnd 10.00fF
+C12 Qm clk 3.96fF
+C13 Q 0 8.19fF
+C14 Qm 0 7.65fF
+C15 Qbar 0 11.20fF
+.ends

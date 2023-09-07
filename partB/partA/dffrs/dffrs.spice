@@ -1,0 +1,73 @@
+* SPICE3 file created from dffrs_nor.ext - technology: scmos
+.include "0.25-models"
+.option scale=1u
+
+.subckt DFFRS D S R Q Qbar 
+M1000 gnd Qbar Q gnd CMOSN w=12 l=2
++  ad=384 pd=224 as=72 ps=36
+M1001 Dpass D1 gnd gnd CMOSN w=4 l=2
++  ad=60 pd=44 as=0 ps=0
+M1002 a_33_1# S D1 Vdd CMOSP w=36 l=2
++  ad=216 pd=84 as=324 ps=132
+M1003 gnd R Dpass gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 Qbar clk D1 gnd CMOSN w=6 l=2
++  ad=60 pd=44 as=108 ps=60
+M1005 Qbar Q gnd gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 a_187_1# Q Qbar Vdd CMOSP w=12 l=2
++  ad=72 pd=36 as=180 ps=84
+M1007 a_70_1# D1 Dpass Vdd CMOSP w=12 l=2
++  ad=72 pd=36 as=180 ps=84
+M1008 gnd S Qbar gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_150_1# R Q Vdd CMOSP w=36 l=2
++  ad=216 pd=84 as=216 ps=84
+M1010 Dpass not_clk D gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+M1011 Vdd S a_187_1# Vdd CMOSP w=12 l=2
++  ad=576 pd=240 as=0 ps=0
+M1012 Vdd R a_70_1# Vdd CMOSP w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1013 gnd Dpass D1 gnd CMOSN w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 D1 S gnd gnd CMOSN w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 Q R gnd gnd CMOSN w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 Dpass clk D Vdd CMOSP w=18 l=2
++  ad=0 pd=0 as=108 ps=48
+M1017 Vdd Qbar a_150_1# Vdd CMOSP w=36 l=2
++  ad=0 pd=0 as=0 ps=0
+M1018 Vdd Dpass a_33_1# Vdd CMOSP w=36 l=2
++  ad=0 pd=0 as=0 ps=0
+M1019 Qbar not_clk D1 Vdd CMOSP w=18 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 D1 gnd 4.09fF
+C1 S clk 7.93fF
+C2 Qbar gnd 22.48fF
+C3 Dpass gnd 21.39fF
+C4 R Qbar 9.93fF
+C5 Q Vdd 15.29fF
+C6 S Vdd 9.15fF
+C7 Dpass clk 2.16fF
+C8 gnd not_clk 8.82fF
+C9 R gnd 48.27fF
+C10 D1 Vdd 18.48fF
+C11 Qbar Vdd 15.23fF
+C12 Vdd Dpass 14.61fF
+C13 D1 S 7.98fF
+C14 clk gnd 20.24fF
+C15 S Qbar 5.43fF
+C16 S Dpass 14.97fF
+C17 Vdd not_clk 20.77fF
+C18 Q gnd 3.71fF
+C19 R Vdd 9.39fF
+C20 S gnd 41.90fF
+C21 Vdd clk 5.76fF
+C22 not_clk 0 3.67fF
+C23 Q 0 9.32fF
+C24 clk 0 9.86fF
+C25 S 0 7.32fF
+C26 gnd 0 5.26fF
+.ends

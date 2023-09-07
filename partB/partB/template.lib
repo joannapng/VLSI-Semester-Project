@@ -1,0 +1,70 @@
+library (myLibrary) {
+
+  /* Documentation Attributes */
+  date                    		: "Mon 16 Jan 2023, 18:11:58";
+  revision                		: "revision 1.0";
+  comment                 		: "MY LIBERTY FILE";
+
+  /* General Attributes */
+   delay_model : table_lookup;
+
+   nom_process     : 1.0;
+   nom_temperature : 125;
+   nom_voltage     : 2.5;
+
+   time_unit               : "1ns";
+   voltage_unit            : "1V";
+   current_unit            : "1mA";
+   pulling_resistance_unit : "1kohm";
+   leakage_power_unit      : "1pW";
+   capacitive_load_unit(1, pf);
+
+/* Library Description: Default Attributes */
+
+   default_output_pin_cap       : 0.0;
+   default_inout_pin_cap        : 1.0;
+   default_input_pin_cap        : 1.0;
+   default_fanout_load          : 1.0;
+   default_cell_leakage_power   : 0.0;
+   default_max_transition       : 10;
+
+   in_place_swap_mode : match_footprint;
+ 
+/* Library Operating Conditions */
+ 
+   operating_conditions(SLOW) {
+      process     :  1.0 ;
+      temperature :  125 ;
+      voltage     :  2.5 ;
+      tree_type   : balanced_tree ;
+   }
+  
+   default_operating_conditions : SLOW ;
+
+/* TLF atributes */
+  default_leakage_power_density  : 0.0;
+  slew_derate_from_library : 1;
+  slew_lower_threshold_pct_fall  : 30.0;
+  slew_upper_threshold_pct_fall  : 70.0;
+  slew_lower_threshold_pct_rise  : 30.0;
+  slew_upper_threshold_pct_rise  : 70.0;
+  input_threshold_pct_fall : 50.0;
+  input_threshold_pct_rise : 50.0;
+  output_threshold_pct_fall   : 50.0;
+  output_threshold_pct_rise   : 50.0;
+  
+/* Library Look_Up Tables Templates */
+
+   lu_table_template(Timing_template_6_7) {
+      variable_1 : total_output_net_capacitance;
+      variable_2 : input_net_transition;
+      index_1 ("0.0017, 0.0062, 0.0232, 0.0865, 0.3221, 1.2");
+      index_2 ("0.0042, 0.0307, 0.0768, 0.192, 0.48, 1.2, 3");
+  }
+
+   lu_table_template(Constraint_5_5) {
+      variable_1 : related_pin_transition;
+      variable_2 : constrained_pin_transition;
+      index_1 ("0.0042, 0.0307, 0.0768, 0.48, 3");
+      index_2 ("0.0042, 0.0307, 0.0768, 0.48, 3");
+   }

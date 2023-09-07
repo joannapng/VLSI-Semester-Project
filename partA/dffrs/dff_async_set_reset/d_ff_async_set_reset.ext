@@ -1,0 +1,118 @@
+timestamp 1672438776
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "Qbar" 113 4136 463 -38 ndiff 20 18 48 28 0 0 0 0 0 0 0 0 132 74 0 0 0 0
+node "a_152_n31#" 279 12408 152 -31 ndiff 72 60 0 0 0 0 0 0 0 0 0 0 336 176 0 0 0 0
+node "Q" 729 37242 403 -18 ndiff 24 20 48 28 210 152 0 0 0 0 0 0 536 276 0 0 0 0
+node "mux_out_1" 833 25108 360 -69 pdiff 48 40 96 56 68 64 0 0 0 0 0 0 520 268 0 0 0 0
+node "Qpass" 920 47459 240 -28 pdiff 96 68 192 100 0 0 0 0 0 0 0 0 996 514 621 326 0 0
+node "not_sel" 506 18798 317 -4 ndiff 20 18 48 28 74 74 0 0 0 0 0 0 276 154 176 96 0 0
+node "sel" 2243 72284 257 -79 ndiff 48 40 0 0 364 360 0 0 0 0 0 0 736 392 264 148 0 0
+node "a_93_n51#" 350 20238 93 -51 p 48 40 0 0 124 70 0 0 0 0 0 0 326 162 0 0 0 0
+node "gnd" 848 187804 -99 -57 ndiff 192 160 0 0 0 0 0 0 0 0 0 0 4096 2072 260 146 0 0
+node "S" 1929 104616 -97 -50 pc 52 42 0 0 310 306 0 0 0 0 0 0 1168 624 1758 896 0 0
+node "not_clk" 6144 118450 -124 -87 p 0 0 0 0 1038 1038 0 0 0 0 0 0 16 16 0 0 0 0
+node "Qm" 1031 71910 81 -16 ndiff 120 88 192 100 0 0 0 0 0 0 0 0 1750 874 0 0 0 0
+node "or_1_out" 279 13912 -68 -3 ndiff 72 60 0 0 0 0 0 0 0 0 0 0 352 184 0 0 0 0
+node "not_R" 1415 53300 -23 -57 ndiff 48 40 48 28 204 204 0 0 0 0 0 0 648 340 368 192 0 0
+node "not_S" 1931 93798 -91 -57 ndiff 48 40 48 28 290 290 0 0 0 0 0 0 1104 576 948 490 0 0
+node "Vdd" 1837 160748 -99 -43 pdiff 0 0 384 224 0 0 0 0 0 0 0 0 3508 1794 624 344 0 0
+node "a_4_n2#" 476 21160 4 -2 ndiff 48 40 0 0 68 64 0 0 0 0 0 0 388 202 0 0 0 0
+node "Dpass" 676 29672 -122 -20 ndiff 96 68 144 72 0 0 0 0 0 0 0 0 544 288 832 424 0 0
+node "D" 195 3008 -130 -20 ndiff 48 28 96 44 0 0 0 0 0 0 0 0 152 84 0 0 0 0
+node "R" 2270 106692 -29 -50 pc 48 40 0 0 368 364 0 0 0 0 0 0 1148 614 1152 600 0 0
+node "clk" 4975 95126 -124 -4 p 0 0 0 0 842 842 0 0 0 0 0 0 16 16 0 0 0 0
+cap "Dpass" "S" 1592
+cap "not_sel" "Qm" 720
+cap "not_sel" "Qpass" 152
+cap "S" "Vdd" 720
+cap "not_clk" "S" 1320
+cap "or_1_out" "Vdd" 720
+cap "gnd" "not_R" 1440
+cap "clk" "Qm" 240
+cap "Qm" "R" 1680
+cap "gnd" "R" 720
+cap "Qm" "sel" 960
+cap "sel" "Qpass" 1832
+cap "gnd" "sel" 720
+cap "Dpass" "not_R" 1768
+cap "S" "a_93_n51#" 3060
+cap "R" "not_S" 720
+cap "Vdd" "Q" 720
+cap "R" "a_152_n31#" 720
+cap "S" "not_R" 872
+cap "gnd" "Qm" 720
+cap "gnd" "Qpass" 2160
+cap "Dpass" "R" 872
+cap "clk" "Vdd" 960
+cap "R" "Vdd" 1440
+cap "not_clk" "R" 240
+cap "gnd" "not_S" 2160
+cap "Qpass" "mux_out_1" 720
+cap "S" "R" 2869
+cap "S" "sel" 240
+cap "Dpass" "gnd" 720
+cap "Qm" "Vdd" 720
+cap "not_S" "a_152_n31#" 240
+cap "Dpass" "not_S" 1048
+cap "not_clk" "gnd" 960
+cap "S" "Qpass" 960
+cap "S" "gnd" 2160
+cap "not_clk" "not_S" 152
+cap "a_4_n2#" "R" 720
+cap "R" "a_93_n51#" 240
+cap "S" "not_S" 4571
+cap "not_sel" "sel" 240
+cap "Dpass" "Vdd" 2512
+cap "R" "not_R" 1440
+cap "S" "a_152_n31#" 720
+device mosfet nfet 265 -89 266 -88 2 4 "Gnd!" "S" 4 0 "S" 4 0 "sel" 4 0
+device mosfet pfet 358 -69 359 -68 2 8 "Vdd!" "sel" 4 0 "Qpass" 8 0 "mux_out_1" 8 0
+device mosfet nfet 415 -51 416 -50 4 4 "Gnd!" "Q" 8 0 "Qpass" 4 0 "gnd" 4 0
+device mosfet nfet 358 -51 359 -50 2 4 "Gnd!" "not_sel" 4 0 "Qpass" 4 0 "mux_out_1" 4 0
+device mosfet nfet 461 -38 462 -37 2 4 "Gnd!" "Q" 4 0 "gnd" 4 0 "Qbar" 4 0
+device mosfet pfet 415 -36 416 -35 4 8 "Vdd!" "Q" 8 0 "Qpass" 8 0 "Vdd" 8 0
+device mosfet pfet 358 -31 359 -30 2 8 "Vdd!" "not_sel" 4 0 "Qm" 8 0 "mux_out_1" 8 0
+device mosfet pfet 461 -21 462 -20 2 8 "Vdd!" "Q" 4 0 "Vdd" 8 0 "Qbar" 8 0
+device mosfet nfet 401 -18 402 -17 2 4 "Gnd!" "mux_out_1" 4 0 "gnd" 4 0 "Q" 4 0
+device mosfet nfet 358 -13 359 -12 2 4 "Gnd!" "sel" 4 0 "Qm" 4 0 "mux_out_1" 4 0
+device mosfet nfet 255 -79 256 -78 2 4 "Gnd!" "not_S" 4 0 "R" 4 0 "sel" 4 0
+device mosfet nfet 199 -48 200 -47 2 4 "Gnd!" "S" 4 0 "a_152_n31#" 4 0 "not_S" 4 0
+device mosfet nfet 186 -32 187 -31 2 4 "Gnd!" "not_S" 4 0 "a_152_n31#" 4 0 "Qm" 4 0
+device mosfet nfet 136 -49 137 -48 2 4 "Gnd!" "R" 4 0 "a_93_n51#" 4 0 "R" 4 0
+device mosfet nfet 93 -49 94 -48 4 4 "Gnd!" "a_93_n51#" 8 0 "Dpass" 4 0 "gnd" 4 0
+device mosfet pfet 238 -28 239 -27 2 16 "Vdd!" "not_clk" 4 0 "Qm" 16 0 "Qpass" 16 0
+device mosfet nfet 150 -31 151 -30 2 4 "Gnd!" "not_R" 4 0 "a_93_n51#" 4 0 "a_152_n31#" 4 0
+device mosfet pfet 401 -4 402 -3 2 8 "Vdd!" "mux_out_1" 4 0 "Vdd" 8 0 "Q" 8 0
+device mosfet nfet 315 -4 316 -3 2 4 "Gnd!" "sel" 4 0 "gnd" 4 0 "not_sel" 4 0
+device mosfet nfet 238 -2 239 -1 2 8 "Gnd!" "clk" 4 0 "Qm" 8 0 "Qpass" 8 0
+device mosfet pfet 315 13 316 14 2 8 "Vdd!" "sel" 4 0 "Vdd" 8 0 "not_sel" 8 0
+device mosfet pfet 93 -34 94 -33 4 8 "Vdd!" "a_93_n51#" 8 0 "Dpass" 8 0 "Vdd" 8 0
+device mosfet nfet -25 -57 -24 -56 2 4 "Gnd!" "R" 4 0 "gnd" 4 0 "not_R" 4 0
+device mosfet nfet -93 -57 -92 -56 2 4 "Gnd!" "S" 4 0 "gnd" 4 0 "not_S" 4 0
+device mosfet nfet 79 -16 80 -15 2 4 "Gnd!" "a_4_n2#" 4 0 "gnd" 4 0 "Qm" 4 0
+device mosfet nfet 13 -19 14 -18 2 4 "Gnd!" "R" 4 0 "not_R" 4 0 "a_4_n2#" 4 0
+device mosfet pfet -25 -43 -24 -42 2 8 "Vdd!" "R" 4 0 "Vdd" 8 0 "not_R" 8 0
+device mosfet nfet -56 -16 -55 -15 2 4 "Gnd!" "S" 4 0 "S" 4 0 "or_1_out" 4 0
+device mosfet pfet -93 -43 -92 -42 2 8 "Vdd!" "S" 4 0 "Vdd" 8 0 "not_S" 8 0
+device mosfet nfet -124 -20 -123 -19 2 8 "Gnd!" "not_clk" 4 0 "D" 8 0 "Dpass" 8 0
+device mosfet pfet 79 -2 80 -1 2 8 "Vdd!" "a_4_n2#" 4 0 "Vdd" 8 0 "Qm" 8 0
+device mosfet nfet 2 -2 3 -1 2 4 "Gnd!" "not_R" 4 0 "or_1_out" 4 0 "a_4_n2#" 4 0
+device mosfet nfet -70 -3 -69 -2 2 4 "Gnd!" "not_S" 4 0 "Dpass" 4 0 "or_1_out" 4 0
+device mosfet pfet -124 -2 -123 -1 2 16 "Vdd!" "clk" 4 0 "D" 16 0 "Dpass" 16 0
+subcap "gnd" -164116
+subcap "S" -61814
+subcap "not_clk" -80842
+subcap "not_S" -68204
+subcap "Vdd" -157988
+subcap "Dpass" -17180
+subcap "D" -564
+subcap "not_R" -38744
+subcap "R" -101518
+subcap "Qpass" -31667
+subcap "sel" -71908
+subcap "mux_out_1" -23228
+subcap "Q" -6674

@@ -1,0 +1,43 @@
+* SPICE3 file created from d_ff_wrong.ext - technology: scmos
+
+.include "0.25-models"
+.option scale=1u
+
+M1000 Qm a_n4_n16# Vdd Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=240 ps=140
+M1001 Q a_63_n20# Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1002 gnd Qm a_n4_n16# Gnd CMOSN w=4 l=4
++  ad=120 pd=100 as=48 ps=40
+M1003 Q a_63_n20# gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1004 gnd Q a_63_n20# Gnd CMOSN w=4 l=4
++  ad=0 pd=0 as=48 ps=40
+M1005 a_63_n20# not_clk Qm Vdd CMOSP w=8 l=2
++  ad=96 pd=56 as=0 ps=0
+M1006 Qbar Q gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1007 Vdd Qm a_n4_n16# Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=96 ps=56
+M1008 a_n4_n16# not_clk D Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=24 ps=20
+M1009 a_n4_n16# clk D Vdd CMOSP w=8 l=2
++  ad=0 pd=0 as=48 ps=28
+M1010 Vdd Q a_63_n20# Vdd CMOSP w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1011 Qbar Q Vdd Vdd CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1012 Qm a_n4_n16# gnd Gnd CMOSN w=4 l=2
++  ad=48 pd=40 as=0 ps=0
+M1013 a_63_n20# clk Qm Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 Qbar Gnd 3.57fF
+C1 gnd Gnd 36.47fF
+C2 not_clk Gnd 40.62fF
+C3 Q Gnd 32.84fF
+C4 a_63_n20# Gnd 10.68fF
+C5 Qm Gnd 24.84fF
+C6 Vdd Gnd 3.38fF
+C7 D Gnd 3.01fF
+C8 a_n4_n16# Gnd 18.62fF
+C9 clk Gnd 27.77fF

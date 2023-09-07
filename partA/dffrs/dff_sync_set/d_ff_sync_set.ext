@@ -1,0 +1,54 @@
+timestamp 1671749602
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "gnd" 505 59408 -35 -50 ndiff 120 100 0 0 0 0 0 0 0 0 0 0 1368 692 0 0 0 0
+node "Q" 305 22212 88 -16 ndiff 24 20 48 28 124 70 0 0 0 0 0 0 364 190 0 0 0 0
+node "Qm" 750 25220 17 -16 ndiff 72 48 144 72 124 70 0 0 0 0 0 0 516 266 0 0 0 0
+node "Vdd" 1099 61116 -35 -36 pdiff 0 0 240 140 0 0 0 0 0 0 0 0 1356 710 428 238 0 0
+node "a_63_n28#" 875 18992 63 -28 pdiff 72 48 144 72 68 64 0 0 0 0 0 0 408 220 112 64 0 0
+node "S" 1186 36013 -33 -43 pc 24 20 0 0 208 204 0 0 0 0 0 0 375 200 0 0 0 0
+node "not_clk" 2815 52048 -66 -65 p 0 0 0 0 480 480 0 0 0 0 0 0 16 16 0 0 0 0
+node "a_n20_9#" 511 15106 -20 9 ndiff 48 40 0 0 74 70 0 0 0 0 0 0 248 132 0 0 0 0
+node "a_n27_n50#" 978 20088 -27 -50 ndiff 24 20 48 28 152 152 0 0 0 0 0 0 116 66 0 0 0 0
+node "a_n64_n20#" 676 24310 -64 -20 ndiff 96 68 144 72 0 0 0 0 0 0 0 0 552 292 388 202 0 0
+node "D" 195 3008 -72 -20 ndiff 48 28 96 44 0 0 0 0 0 0 0 0 152 84 0 0 0 0
+node "clk" 2266 41100 -66 -4 p 0 0 0 0 388 388 0 0 0 0 0 0 16 16 0 0 0 0
+cap "S" "a_n27_n50#" 480
+cap "Vdd" "clk" 720
+cap "S" "Vdd" 720
+cap "a_n27_n50#" "a_n64_n20#" 960
+cap "S" "a_n64_n20#" 190
+cap "gnd" "not_clk" 720
+cap "Qm" "Vdd" 720
+cap "Vdd" "a_n64_n20#" 720
+cap "gnd" "a_63_n28#" 720
+cap "Vdd" "Q" 720
+cap "S" "a_n20_9#" 240
+cap "gnd" "a_n64_n20#" 1168
+device mosfet nfet 100 -49 101 -48 4 4 "Gnd!" "Q" 8 0 "a_63_n28#" 4 0 "gnd" 4 0
+device mosfet pfet 100 -34 101 -33 4 8 "Vdd!" "Q" 8 0 "a_63_n28#" 8 0 "Vdd" 8 0
+device mosfet nfet 31 -49 32 -48 4 4 "Gnd!" "Qm" 8 0 "a_n64_n20#" 4 0 "gnd" 4 0
+device mosfet nfet 86 -16 87 -15 2 4 "Gnd!" "a_63_n28#" 4 0 "gnd" 4 0 "Q" 4 0
+device mosfet pfet 61 -28 62 -27 2 16 "Vdd!" "not_clk" 4 0 "Qm" 16 0 "a_63_n28#" 16 0
+device mosfet pfet 31 -34 32 -33 4 8 "Vdd!" "Qm" 8 0 "a_n64_n20#" 8 0 "Vdd" 8 0
+device mosfet nfet -29 -50 -28 -49 2 4 "Gnd!" "S" 4 0 "gnd" 4 0 "a_n27_n50#" 4 0
+device mosfet pfet -29 -36 -28 -35 2 8 "Vdd!" "S" 4 0 "Vdd" 8 0 "a_n27_n50#" 8 0
+device mosfet nfet 15 -16 16 -15 2 4 "Gnd!" "a_n20_9#" 4 0 "gnd" 4 0 "Qm" 4 0
+device mosfet nfet -9 -9 -8 -8 2 4 "Gnd!" "S" 4 0 "S" 4 0 "a_n20_9#" 4 0
+device mosfet pfet 86 -2 87 -1 2 8 "Vdd!" "a_63_n28#" 4 0 "Vdd" 8 0 "Q" 8 0
+device mosfet nfet 61 -2 62 -1 2 8 "Gnd!" "clk" 4 0 "Qm" 8 0 "a_63_n28#" 8 0
+device mosfet pfet 15 -2 16 -1 2 8 "Vdd!" "a_n20_9#" 4 0 "Vdd" 8 0 "Qm" 8 0
+device mosfet nfet -66 -20 -65 -19 2 8 "Gnd!" "not_clk" 4 0 "D" 8 0 "a_n64_n20#" 8 0
+device mosfet nfet -22 9 -21 10 2 4 "Gnd!" "a_n27_n50#" 4 0 "a_n64_n20#" 4 0 "a_n20_9#" 4 0
+device mosfet pfet -66 -2 -65 -1 2 16 "Vdd!" "clk" 4 0 "D" 16 0 "a_n64_n20#" 16 0
+subcap "gnd" -33840
+subcap "Qm" -23716
+subcap "Vdd" -58888
+subcap "S" -6032
+subcap "not_clk" -19676
+subcap "a_n27_n50#" -4128
+subcap "a_n64_n20#" -8460
+subcap "D" -564
